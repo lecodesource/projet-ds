@@ -1,0 +1,11 @@
+stages:
+  prepare:
+    cmd: python src/prepare.py
+    deps:
+      - src/prepare.py
+      - data/breast_cancer.csv
+    params:
+      - prepare.test_size
+      - prepare.seed
+    outs:
+      - data/prepared
